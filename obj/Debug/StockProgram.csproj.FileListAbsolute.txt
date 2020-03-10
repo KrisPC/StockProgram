@@ -1,0 +1,8 @@
+C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\bin\Debug\StockProgram.exe.config
+C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\bin\Debug\StockProgram.exe
+C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\bin\Debug\StockProgram.pdb
+C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\obj\Debug\StockProgram.csprojAssemblyReference.cache
+C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\obj\Debug\StockProgram.Properties.Resources.resources
+C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\obj\Debug\StockProgram.csproj.GenerateResource.cache
+C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\obj\Debug\StockProgram.exe
+C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\obj\Debug\StockProgram.pdb
