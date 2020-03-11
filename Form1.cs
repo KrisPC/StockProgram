@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +9,26 @@ namespace StockProgram
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            string input = textBox1.Text;
+            Stock s = await Program.RunASync(input);
+            textBox2.Text = "Name of stock: " + s.Name + Environment.NewLine + "Price of Stock: " + s.Price;
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }
