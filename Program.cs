@@ -1,6 +1,6 @@
 ﻿//Author:Kris, Noah, David
 // date 03/11/2020
-// objective: proof of concept 
+// objective: proof of concept
 //API used alphavatage
 using Newtonsoft.Json.Linq;
 using System;
@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-// will be named later 
+// will be named later
 namespace StockProgram
 {
   internal class Stock
