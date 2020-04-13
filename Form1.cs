@@ -35,6 +35,7 @@ namespace StockProgram
                 double inputDouble = Convert.ToDouble(input2);
                 Stock s = await Program.RunASync(input);
                 double answer = (s.Price * inputDouble);
+                //We need a running total in order to keep track of each value of the stock.
                 total += answer;
                 textBox2.Text = textBox3.Text + " shares of " + s.Name + " at price of " + s.Price + " is equal to " + answer + Environment.NewLine + "Total is: " + total;
                 
@@ -66,6 +67,7 @@ namespace StockProgram
 
         }
 
+        //This button will save to text file, showing a "history" of previous portfolio values in a way that makes sense to the user
         private void button2_Click(object sender, EventArgs e)
         {
             
@@ -93,6 +95,8 @@ namespace StockProgram
             
         }
 
+        //We want to create a clear button that erases everything, including the running total so that
+        //the user does not have to backspace everything. Plus, the result box is read only.
         private void button3_Click(object sender, EventArgs e)
         {
             total = 0;
