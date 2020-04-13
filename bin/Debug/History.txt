@@ -22,3 +22,15 @@ Monday, April 13, 2020 2:10:27 PM
 1 shares of NVAX at price of 17.05 is equal to 17.05
 Total is: 821.02
 Monday, April 13, 2020 2:10:36 PM
+---------
+3 shares of AAPL at price of 267.99 is equal to 803.97
+Total is: 803.97
+Monday, April 13, 2020 2:23:44 PM
+---------
+3 shares of AAPL at price of 267.99 is equal to 803.97
+Total is: 803.97
+Monday, April 13, 2020 2:24:11 PM
+---------
+3 shares of AAPL at price of 267.99 is equal to 803.97
+Total is: 803.97
+Monday, April 13, 2020 2:25:39 PM

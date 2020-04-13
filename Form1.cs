@@ -4,6 +4,7 @@
 //API used: alphavantage
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -108,6 +109,12 @@ namespace StockProgram
         private void Form1_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string path = Environment.CurrentDirectory + "/" + "History.txt";
+            Process.Start("notepad.exe", path);
         }
     }
 }
