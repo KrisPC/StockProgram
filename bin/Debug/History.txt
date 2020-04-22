@@ -1,36 +1,19 @@
+1 shares of AAPL at price of 282.8 is equal to 282.8
+Total is: 282.8
+Monday, April 20, 2020 3:05:51 PM
 ---------
-3 shares of MSFT at price of 165.14 is equal to 495.42
-Total is: 495.42
-Monday, April 13, 2020 1:59:51 PM
+3 shares of NVAX at price of 19.08 is equal to 57.24
+Total is: 340.04
+Monday, April 20, 2020 3:06:04 PM
 ---------
-1 shares of MSFT at price of 165.14 is equal to 165.14
-Total is: 660.56
-Monday, April 13, 2020 2:00:00 PM
+3 shares of AAPL at price of 275.76 is equal to 827.28
+Total is: 827.28
+Wednesday, April 22, 2020 5:40:35 PM
 ---------
-3 shares of AAPL at price of 267.99 is equal to 803.97
-Total is: 803.97
-Monday, April 13, 2020 2:09:37 PM
+3 shares of MFST at price of 0.0002 is equal to 0.0006
+Total is: 827.2806
+Wednesday, April 22, 2020 5:40:48 PM
 ---------
-4 shares of NVAX at price of 17.05 is equal to 68.2
-Total is: 872.17
-Monday, April 13, 2020 2:09:47 PM
----------
-3 shares of AAPL at price of 267.99 is equal to 803.97
-Total is: 803.97
-Monday, April 13, 2020 2:10:27 PM
----------
-1 shares of NVAX at price of 17.05 is equal to 17.05
-Total is: 821.02
-Monday, April 13, 2020 2:10:36 PM
----------
-3 shares of AAPL at price of 267.99 is equal to 803.97
-Total is: 803.97
-Monday, April 13, 2020 2:23:44 PM
----------
-3 shares of AAPL at price of 267.99 is equal to 803.97
-Total is: 803.97
-Monday, April 13, 2020 2:24:11 PM
----------
-3 shares of AAPL at price of 267.99 is equal to 803.97
-Total is: 803.97
-Monday, April 13, 2020 2:25:39 PM
+3 shares of MSFT at price of 173.52 is equal to 520.56
+Total is: 1347.8406
+Wednesday, April 22, 2020 5:40:58 PM

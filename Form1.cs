@@ -1,6 +1,6 @@
 ﻿///Author:Kris, Noah, David
-// date 04/13/2020
-// objective: Sprint 2
+// date 04/22/2020
+// objective: Sprint 3
 //API used: alphavantage
 using System;
 using System.Collections.Generic;
@@ -72,10 +72,12 @@ namespace StockProgram
         private void button2_Click(object sender, EventArgs e)
         {
             
-            MessageBox.Show(textBox2.Text + Environment.NewLine + "FILE CREATED SUCCESSFULLY", "Total Box");
+            MessageBox.Show(textBox2.Text + Environment.NewLine + "Portfolio updated successfully, please check history", "Update Box");
             string messageDate = (DateTime.Now.ToString("F"));
 
             string path = Environment.CurrentDirectory + "/" + "History.txt";
+
+            
 
             List<string> lines = File.ReadAllLines(path).ToList();
             lines.Add("---------");
@@ -115,6 +117,17 @@ namespace StockProgram
         {
             string path = Environment.CurrentDirectory + "/" + "History.txt";
             Process.Start("notepad.exe", path);
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string path2 = Environment.CurrentDirectory + "/" + "ReadMe.txt";
+            if (!File.Exists(path2))
+            {
+                File.CreateText(path2);
+
+            }
+            Process.Start("notepad.exe", path2);
         }
     }
 }
