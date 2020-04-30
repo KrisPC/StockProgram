@@ -1,6 +1,6 @@
 ﻿//Author:Kris, Noah, David
-// date 04/22/2020
-// objective: Sprint 3
+// date 04/30/2020
+// objective: Sprint 4
 //API used alphavatage
 using Newtonsoft.Json.Linq;
 using System;

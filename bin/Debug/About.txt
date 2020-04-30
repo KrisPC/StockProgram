@@ -1,0 +1,13 @@
+Welcome to the about / more information section!
+
+In order to provide security to the application, we must include some sort of protection screen for the user; however,
+due to lack of resources, we are unable to access a database at this time, meaning that storing information for a login screen would be almost 
+impossible. For the time being, please use the pre-selected username and password for access to our stock program. Enjoy!
+
+(NOTE: all information will be entered WITHOUT the quotation marks, and are case sensitive.)
+
+Username: "admin"
+
+Password: "password"
+
+Please contact kristopher.clancy@cuw.edu for more help, questions, concerns, or comments you would like to add!

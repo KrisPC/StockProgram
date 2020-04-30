@@ -1,6 +1,6 @@
 ﻿///Author:Kris, Noah, David
-// date 04/22/2020
-// objective: Sprint 3
+// date 04/30/2020
+// objective: Sprint 4
 //API used: alphavantage
 using System;
 using System.Collections.Generic;
@@ -13,11 +13,15 @@ namespace StockProgram
 {
     public partial class Form1 : Form
     {
-
+        List<Panel> listPanel = new List<Panel>();
+        
+        
         public Form1()
         {
             InitializeComponent();
-            this.ActiveControl = textBox1;
+            this.ActiveControl = textBox4;
+            panel1.Visible = true;
+            panel2.Visible = false;
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -33,13 +37,15 @@ namespace StockProgram
                 // current value display this to the screen. 
                 string input = textBox1.Text;
                 string input2 = textBox3.Text;
-                double inputDouble = Convert.ToDouble(input2);
+
                 Stock s = await Program.RunASync(input);
+                double inputDouble = Convert.ToDouble(input2);
                 double answer = (s.Price * inputDouble);
+
                 //We need a running total in order to keep track of each value of the stock.
                 total += answer;
                 textBox2.Text = textBox3.Text + " shares of " + s.Name + " at price of " + s.Price + " is equal to " + answer + Environment.NewLine + "Total is: " + total;
-                
+
 
             }
                 
@@ -48,6 +54,10 @@ namespace StockProgram
                 textBox2.Text = "ERROR, CHECK INPUT BOXES";
 
             }
+        }
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -76,8 +86,6 @@ namespace StockProgram
             string messageDate = (DateTime.Now.ToString("F"));
 
             string path = Environment.CurrentDirectory + "/" + "History.txt";
-
-            
 
             List<string> lines = File.ReadAllLines(path).ToList();
             lines.Add("---------");
@@ -110,7 +118,9 @@ namespace StockProgram
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-
+            listPanel.Add(panel2);
+            listPanel.Add(panel1);
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -129,5 +139,61 @@ namespace StockProgram
             }
             Process.Start("notepad.exe", path2);
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nxtBtn_Click(object sender, EventArgs e)
+        {
+            string username = textBox4.Text;
+            string password = textBox5.Text;
+
+            if ((panel1.Visible) && (username == "admin") && (password == "password"))
+            {
+                MessageBox.Show("Access Granted");
+                panel1.Visible = false;
+                panel2.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Access Denied, please try re-entering username and password correcly." + Environment.NewLine + "Refer to about section for more details.");
+            }
+               
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //About section for the user, this will provide the login information for those who need it right away
+            string path3 = Environment.CurrentDirectory + "/" + "About.txt";
+            if (!File.Exists(path3))
+            {
+                File.CreateText(path3);
+
+            }
+            Process.Start("notepad.exe", path3);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
