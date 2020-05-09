@@ -1,6 +1,6 @@
 ﻿//Author:Kris, Noah, David
-// date 04/30/2020
-// objective: Sprint 4
+// date 5/9/2020
+// objective: Sprint 5
 //API used alphavatage
 using Newtonsoft.Json.Linq;
 using System;
@@ -48,7 +48,7 @@ namespace StockProgram
           else
           {
             Stock failedStock = new Stock();
-//will give more meaningful error in the future
+            //will give more meaningful error in the future
             failedStock.Name = "error";
             failedStock.Price = 0;
             return failedStock;
@@ -57,7 +57,7 @@ namespace StockProgram
         catch
         {
           Stock failedStock = new Stock();
-//will give more meaningful error in the future
+          //will give more meaningful error in the future
           failedStock.Name = "error";
           failedStock.Price = 0;
           return failedStock;

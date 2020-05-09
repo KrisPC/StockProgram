@@ -11,3 +11,4 @@ C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgra
 C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\obj\Debug\StockProgram.Form1.resources
+C:\Users\krisc\OneDrive - Concordia University Wisconsin\VS Projects\StockProgram\obj\Debug\StockProgram.csprojAssemblyReference.cache

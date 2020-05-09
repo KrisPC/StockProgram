@@ -30,6 +30,9 @@ namespace StockProgram
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,9 +56,17 @@ namespace StockProgram
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.stockChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.bckBtn1 = new System.Windows.Forms.Button();
+            this.crtBtn = new System.Windows.Forms.Button();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockChart)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -194,10 +205,11 @@ namespace StockProgram
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(351, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(359, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -218,6 +230,7 @@ namespace StockProgram
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.crtBtn);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
@@ -231,7 +244,7 @@ namespace StockProgram
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(0, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(357, 500);
+            this.panel2.Size = new System.Drawing.Size(357, 506);
             this.panel2.TabIndex = 14;
             // 
             // panel1
@@ -246,7 +259,7 @@ namespace StockProgram
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 503);
+            this.panel1.Size = new System.Drawing.Size(357, 509);
             this.panel1.TabIndex = 15;
             // 
             // label8
@@ -333,12 +346,81 @@ namespace StockProgram
             this.label2.TabIndex = 13;
             this.label2.Text = "Stock App Login Screen";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.bckBtn1);
+            this.panel3.Controls.Add(this.stockChart);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Location = new System.Drawing.Point(0, 27);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(357, 506);
+            this.panel3.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(126, 22);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 20);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Portfolio Chart";
+            // 
+            // stockChart
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.stockChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.stockChart.Legends.Add(legend2);
+            this.stockChart.Location = new System.Drawing.Point(22, 63);
+            this.stockChart.Name = "stockChart";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series2.Legend = "Legend1";
+            series2.Name = "Stocks";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            series2.YValuesPerPoint = 10;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
+            this.stockChart.Series.Add(series2);
+            this.stockChart.Size = new System.Drawing.Size(320, 368);
+            this.stockChart.TabIndex = 14;
+            // 
+            // bckBtn1
+            // 
+            this.bckBtn1.Location = new System.Drawing.Point(22, 461);
+            this.bckBtn1.Name = "bckBtn1";
+            this.bckBtn1.Size = new System.Drawing.Size(75, 23);
+            this.bckBtn1.TabIndex = 15;
+            this.bckBtn1.Text = "BACK";
+            this.bckBtn1.UseVisualStyleBackColor = true;
+            this.bckBtn1.Click += new System.EventHandler(this.bckBtn1_Click);
+            // 
+            // crtBtn
+            // 
+            this.crtBtn.Location = new System.Drawing.Point(268, 460);
+            this.crtBtn.Name = "crtBtn";
+            this.crtBtn.Size = new System.Drawing.Size(75, 23);
+            this.crtBtn.TabIndex = 13;
+            this.crtBtn.Text = "CHART";
+            this.crtBtn.UseVisualStyleBackColor = true;
+            this.crtBtn.Click += new System.EventHandler(this.crtBtn_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 524);
+            this.ClientSize = new System.Drawing.Size(359, 533);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
@@ -353,6 +435,9 @@ namespace StockProgram
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,6 +468,12 @@ namespace StockProgram
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button bckBtn1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart stockChart;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button crtBtn;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
 

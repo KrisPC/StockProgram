@@ -1,6 +1,6 @@
 ﻿///Author:Kris, Noah, David
-// date 04/30/2020
-// objective: Sprint 4
+// date 5/9/2020
+// objective: Sprint 5
 //API used: alphavantage
 using System;
 using System.Collections.Generic;
@@ -22,6 +22,7 @@ namespace StockProgram
             this.ActiveControl = textBox4;
             panel1.Visible = true;
             panel2.Visible = false;
+            panel3.Visible = false;
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -37,21 +38,39 @@ namespace StockProgram
                 // current value display this to the screen. 
                 string input = textBox1.Text;
                 string input2 = textBox3.Text;
+                
+                if (input2 == "")
+                {
+                    textBox2.Text = "ERROR, CHECK INPUT BOXES";
 
-                Stock s = await Program.RunASync(input);
-                double inputDouble = Convert.ToDouble(input2);
-                double answer = (s.Price * inputDouble);
+                }
+                
+                else
+                {
+                    Stock s = await Program.RunASync(input);
+                    double inputDouble = Convert.ToDouble(input2);
+                    double answer = (s.Price * inputDouble);
 
-                //We need a running total in order to keep track of each value of the stock.
-                total += answer;
-                textBox2.Text = textBox3.Text + " shares of " + s.Name + " at price of " + s.Price + " is equal to " + answer + Environment.NewLine + "Total is: " + total;
-
+                    //We need a running total in order to keep track of each value of the stock.
+                    total += answer;
+                    textBox2.Text = textBox3.Text + " shares of " + s.Name + " at price of " + s.Price + " is equal to " + answer + Environment.NewLine + "Total is: " + total;
+                    this.stockChart.Series["Stocks"].Points.AddXY(s.Name, total);
+                    foreach (var p in stockChart.Series["Stocks"].Points)
+                    {
+                        p.AxisLabel = (p.AxisLabel == "1") ? "Total in U.S. Dollars" : s.Name;
+                    
+                    }
+                }
 
             }
                 
             catch
             {
-                textBox2.Text = "ERROR, CHECK INPUT BOXES";
+                string input2 = textBox3.Text;
+                if(input2 == "")
+                {
+                    textBox2.Text = "ERROR, CHECK INPUT BOXES";
+                }
 
             }
         }
@@ -114,6 +133,7 @@ namespace StockProgram
             textBox1.Text = "";
             textBox3.Text = "";
             textBox2.Text = "";
+            this.stockChart.Series.Clear();
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -195,5 +215,53 @@ namespace StockProgram
 
         }
 
+        private void bckBtn1_Click(object sender, EventArgs e)
+        {
+            if(panel3.Visible)
+            {
+                panel3.Visible = false;
+                panel2.Visible = true;
+            }
+        }
+
+        private void crtBtn_Click(object sender, EventArgs e)
+        {
+            if(panel2.Visible)
+            {
+                panel2.Visible = false;
+                panel3.Visible = true;
+            }
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (panel2.Visible)
+            {
+                panel2.Visible = false;
+                panel3.Visible = false;
+                panel1.Visible = true;
+                total = 0;
+                textBox1.Text = "";
+                textBox3.Text = "";
+                textBox2.Text = "";
+                this.stockChart.Series.Clear();
+            }
+
+            if (panel3.Visible)
+            {
+                panel2.Visible = false;
+                panel3.Visible = false;
+                panel1.Visible = true;
+                total = 0;
+                textBox1.Text = "";
+                textBox3.Text = "";
+                textBox2.Text = "";
+                this.stockChart.Series.Clear();
+            }
+            if (panel1.Visible)
+            {
+                
+            }
+        }
     }
 }

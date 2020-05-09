@@ -12,3 +12,5 @@ The "CHECK" button only previews the value, but does not actually save to your H
 NOTE. This will not erase anything from your portfolio history.
 
 4. If you wish to view your previous portfolio values, please hit the "OPEN PORTFOLIO" button located at the bottom of the app, and scroll to the bottom for the most recent history.
+
+5. Please enter a negative number of shares with the same stock name that you would like to remove if you would like to take away that number of shares. Ex: Originally had 3 shares of AAPL, second time enter a -1 of AAPL to remove 1 share of AAPL
